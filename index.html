@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1005.png">
+    <title>Pokemon Sprites</title>
+    <style>
+        #heading{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding-left: 20px;
+            color:crimson;
+        }
+        .container{
+            text-align: center;
+        }
+        .container div{
+            border: 1px solid grey;
+            display: inline-block;
+            text-align: center;
+            margin: 0px 10px 10px 0px;
+        }
+        p{
+            display: block;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 id="heading">Pokemon Sprites</h1>
+</div>
+<script>
+let container = document.getElementsByClassName('container');
+for(let i = 1; i<1026; ++i){
+let div = document.createElement('div');
+container[0].appendChild(div);
+let img = document.createElement('img');
+img.setAttribute('src', `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`);
+let p = document.createElement('p');
+p.innerText = `#${i}`;
+div.appendChild(img);
+div.appendChild(p);
+}
+</script>
+</body>
+</html>
